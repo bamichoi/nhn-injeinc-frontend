@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+  </head>
+  <body>
+    <main class="todo-app">
+      <h1 class="todo-app__title" aria-label="Todo App">Todo App</h1>
+      <section class="todo-app__input-section">
+        <input
+          id="todo-input"
+          class="todo-app__input"
+          type="text"
+          placeholder="할 일을 추가해주세요."
+          aria-label="할 일 입력"
+        />
+        <button
+          id="add-button"
+          class="todo-app__add-button"
+          aria-label="할 일 추가"
+          role="button"
+        >
+          추가
+        </button>
+      </section>
+      <section class="todo-app__filters-section">
+        <div
+          id="filters"
+          class="todo-app__filters"
+          role="tablist"
+          aria-label="할 일 필터"
+        >
+          <button
+            id="all-filter"
+            class="todo-app__filter-button todo-app__filter-button--active"
+            data-filter="all"
+            role="tab"
+            aria-selected="true"
+            aria-label="전체 할 일 보기"
+          >
+            전체
+            <span class="todo-app__all-todos-count">(0)</span>
+          </button>
+          <button
+            id="todo-filter"
+            class="todo-app__filter-button"
+            data-filter="todo"
+            role="tab"
+            aria-selected="false"
+            aria-label="완료 전 항목 보기"
+          >
+            완료 전
+            <span class="todo-app__todos-count">(0)</span>
+          </button>
+          <button
+            id="done-filter"
+            class="todo-app__filter-button"
+            data-filter="done"
+            role="tab"
+            aria-selected="false"
+            aria-label="완료된 항목 보기"
+          >
+            완료
+            <span class="todo-app__done-todos-count">(0)</span>
+          </button>
+        </div>
+      </section>
+      <section class="todo-app__list-section" aria-label="할 일 목록">
+        <ul
+          id="todo-list"
+          class="todo-app__list"
+          role="list"
+          aria-label="할 일 목록"
+        ></ul>
+      </section>
+      <section class="todo-app__cleanup-section">
+        <button
+          id="cleanup-done-button"
+          class="todo-app__cleanup-done-button"
+          aria-label="완료된 할 일 모두 삭제"
+          role="button"
+        >
+          완료 항목 삭제<span class="todo-app__done-todos-count">(0)</span>
+        </button>
+      </section>
+    </main>
+  </body>
+</html>

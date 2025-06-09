@@ -1,5 +1,9 @@
 import path from "path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export default {
   entry: "./src/index.ts",
@@ -19,6 +23,10 @@ export default {
         test: /\.ts$/,
         use: ["babel-loader", "ts-loader"],
         exclude: /node_modules/,
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
       },
     ],
   },
